@@ -33,6 +33,7 @@ function App() {
       const iterate = () => {
         if (walls.length === 0){
           clearInterval(handle)
+          setFpt(null)
           return
         }
         const cur = walls.splice(Math.random() * walls.length, 1)[0];
