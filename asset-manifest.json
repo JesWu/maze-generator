@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/maze-generator/static/css/main.a921571f.css",
-    "main.js": "/maze-generator/static/js/main.9e8e044c.js",
+    "main.css": "/maze-generator/static/css/main.501cc35d.css",
+    "main.js": "/maze-generator/static/js/main.a2ab300a.js",
     "static/js/787.cfd8f164.chunk.js": "/maze-generator/static/js/787.cfd8f164.chunk.js",
     "index.html": "/maze-generator/index.html",
-    "main.a921571f.css.map": "/maze-generator/static/css/main.a921571f.css.map",
-    "main.9e8e044c.js.map": "/maze-generator/static/js/main.9e8e044c.js.map",
+    "main.501cc35d.css.map": "/maze-generator/static/css/main.501cc35d.css.map",
+    "main.a2ab300a.js.map": "/maze-generator/static/js/main.a2ab300a.js.map",
     "787.cfd8f164.chunk.js.map": "/maze-generator/static/js/787.cfd8f164.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a921571f.css",
-    "static/js/main.9e8e044c.js"
+    "static/css/main.501cc35d.css",
+    "static/js/main.a2ab300a.js"
   ]
 }
