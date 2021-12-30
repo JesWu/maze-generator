@@ -5,10 +5,10 @@ function MazePanel(props) {
   const { maze } = props;
   
   return (
-    <div class="border-2 border-white p-1">
-      {maze.map((row) => {
-          return <div class="flex flex-row">{row.map((item) => {
-              return <MazeTile val={item}/>
+    <div className="border-2 border-white p-1">
+      {maze.map((row, idy) => {
+          return <div className="flex flex-row" key={idy}>{row.map((item, idx) => {
+              return <MazeTile val={item} key={idx}/>
           })}
           </div>
       })}

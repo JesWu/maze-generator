@@ -13,13 +13,13 @@ function App() {
   };
 
   const [maze, setMaze] = useState(generateMaze(75, 49));
-  const [funcPt, setFuncPt] = useState(null);
+  const [fpt, setFpt] = useState(null)
+  var handle;
 
   const resetMaze = () => {
-    console.log(funcPt)
-    if (funcPt){
-      clearInterval(funcPt)
-      setFuncPt(null)
+    if (fpt){
+      clearInterval(fpt)
+      setFpt(null)
     }
     setMaze(generateMaze(75, 49));
   };
@@ -32,6 +32,7 @@ function App() {
     if (walls.length > 0) {
       const iterate = () => {
         if (walls.length === 0){
+          clearInterval(handle)
           return
         }
         const cur = walls.splice(Math.random() * walls.length, 1)[0];
@@ -42,7 +43,8 @@ function App() {
           walls = [...getWalls(cur, mazeCopy), ...walls];
         }
       };
-      setFuncPt(setInterval(iterate, 10));
+      handle = setInterval(iterate, 1)
+      setFpt(handle)
     }
     setMaze([...mazeCopy]);
   };
@@ -74,18 +76,18 @@ function App() {
   };
 
   return (
-    <div class="w-full flex flex-col items-center h-screen justify-center bg-slate-800 gap-9">
-      <h1 class="font-mono text-5xl text-white text-center">Prim's algorithm</h1>
+    <div className="w-full flex flex-col items-center h-screen justify-center bg-slate-800 gap-9">
+      <h1 className="font-mono text-5xl text-white text-center">Prim's algorithm</h1>
       <MazePanel maze={maze} />
-      <div class="flex flex-row space-x-12">
+      <div className="flex flex-row space-x-12">
         <button
-          class="border-2 text-white rounded px-3 py-0.5"
+          className="border-2 text-white rounded px-3 py-0.5"
           onClick={() => runPrim()}
         >
           Run
         </button>
         <button
-          class="border-2 text-white rounded px-3 py-0.5"
+          className="border-2 text-white rounded px-3 py-0.5"
           onClick={() => {
             resetMaze();
           }}
